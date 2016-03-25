@@ -1,0 +1,125 @@
+.col-msg {
+    padding-left: 0;
+    padding-right: 0;
+
+    @media @scr-tablets {
+        padding-right: 15px;
+    }
+
+}
+
+.chat-messages {
+    margin-bottom: 0;
+
+    .chat-messages-item {
+        position: relative;
+        margin-top: 15px;
+        .border-radius(5px);
+        border: none;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+    }
+
+    .sender {
+        margin-top: 10px;
+        font-size: 14px;
+
+        .name {
+            font-weight: bold;
+            color: #999;
+        }
+
+    }
+    
+    .message {
+        margin-bottom: 10px;
+        padding-top: 10px;
+        padding-bottom: 15px;
+        padding-right: 40px;
+        border-bottom: 1px @lightGrey dashed;
+        font-size: 18px;
+        // color: #FF69B4;
+        color: black;
+    }
+
+    .ui-btn-remove {
+        position: absolute;
+        right: 15px; top: 20px;
+        padding: 0;
+        width: 20px; height: 20px;
+        font-size: 10px;
+        line-height: 1em;
+    }
+
+
+
+}
+
+.chat-toolbar {
+    position: fixed;
+    left: 0; bottom: 0;
+    padding: 15px 0 0;
+    // padding-top: 75px;
+    width: 100%;
+    z-index: 50;
+    background-color: white;
+    // border-top: 1px #CCC solid;
+    .box-shadow(0 0 10px rgba(0,0,0,0.3));
+
+    .ui-btn-send {
+        width: 100%; height: 34px;
+    }
+
+    .buttons-container {
+        margin-bottom: 15;
+    }
+
+    form {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+}
+
+.chat-panel {
+    // padding-top: 75px;
+    padding-bottom: 80px;
+
+    @media @scr-tablets {
+        // padding-top: 70px;
+        padding-bottom: 130px;
+    }
+
+    .message-list {
+        .border-radius(0);
+
+        & + .message-list {
+            margin-top: 15px;
+        }
+
+    }
+
+    // .inner-scroller {
+    //     position: absolute; 
+    //     width: 100%; height: 100%;
+    //     left: 0; top: 0;
+    //     overflow: hidden;
+    //     overflow-y: auto;
+    // }
+
+    .sender {
+        margin-bottom: 0;
+        text-align: right;
+        font-size: 12px;
+        color: #CCC;
+    }
+
+}
+
+.my-chatroom {
+    // padding-top: 15px;
+    // padding-bottom: 15px;
+}

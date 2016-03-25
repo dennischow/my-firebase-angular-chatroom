@@ -1,0 +1,95 @@
+// @brandingSitemapBlue: #171E28;
+@brandingSitemapBlue: #19202A;
+// @bradingFooterBlue: #30343D;
+@bradingFooterBlue: #242B35;
+@brandingBlue: #19AAFF;
+@brandingBlueOpacity: rgba(25,170,255,0.15);
+
+@baseColor: #444444;
+// @darkGrey: #666666;
+@darkGrey: #5E6369;
+@grey: #999999;
+@lightGrey: #E7E7E7;;
+@ultraLightGrey: #F7F7F7;
+
+// @errorRed: #CE4844;
+@errorRed: #EE5A5A;
+
+@white: #FFFFFF;
+@black: #000000;
+
+
+// Commons Font size ( Try locked to these size)
+@fs-64: 64px;
+@fs-42: 42px;
+@fs-32: 32px;
+@fs-28: 28px;
+@fs-22: 22px;
+@fs-18: 18px;
+@fs-16: 16px;
+@fs-14: 14px;
+
+
+
+/*********************************************
+Large devices (large desktops, 1199px and down) 
+*********************************************/
+@scr-larger-desktop: ~"only screen and (max-width: 1199px)";
+
+ /*********************************************
+Medium devices (desktops, 991px and down)
+*********************************************/
+@scr-desktop: ~"only screen and (max-width: 991px)";
+
+/*********************************************
+Small devices (tablets, 767px and down)
+*********************************************/
+@scr-tablets: ~"only screen and (max-width: 767px)";
+
+/*********************************************
+Extra Small devices (smart phones, 600px and down)
+*********************************************/
+@scr-smart-phones: ~"only screen and (max-width: 600px)";
+
+
+
+
+/*********************************************
+Mixins Functions
+*********************************************/
+.border-radius(@value : 5px) {
+  -webkit-border-radius: @value;
+  border-radius: @value;
+}
+
+.box-shadow(@value : 0 0 2px rgba(0,0,0,0.4)) {
+  -webkit-box-shadow: @value;
+  box-shadow: @value;
+}
+
+.text-shadow(@value : 0 1px 2px rgba(0,0,0,0.4)) {
+  text-shadow: @value;
+}
+
+.transition(@value : all 0.2s ease){
+  -webkit-transition: @value;
+  -moz-transition: @value;
+  -o-transition: @value;
+  -ms-transition: @value;
+  transition: @value;
+}
+
+.transform(@value : scale(1)){
+  -webkit-transform: @value;
+  -moz-transform: @value;
+  -o-transform: @value;
+  transform: @value;
+}
+
+.background-cover(@value: cover){
+  -webkit-background-size: @value;
+  -moz-background-size: @value;
+  -o-background-size: @value;
+  background-size: @value;
+  background-repeat: no-repeat;
+}

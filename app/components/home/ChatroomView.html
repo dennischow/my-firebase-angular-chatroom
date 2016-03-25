@@ -1,0 +1,64 @@
+<!-- <div class="my-chatroom container">
+	<div class="row">  -->
+	
+<div class="chat-panel">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+
+				<div class="inner-scroller">
+					<ul class="chat-messages list-group">
+						<li ng-repeat="msg in messages | reverse" class="chat-messages-item list-group-item">
+							<!-- <p class="sender">Sender : {{ msg.from }} - id : {{ msg.$id }}</p> -->
+							<!-- <p class="message">{{ $index }} Message : {{ msg.body }}</p> -->
+							<p class="message">{{ msg.body }}</p>
+							<!-- <p class="sender">posted by : <span class="name">{{ msg.from }}</span> - {{ msg.created }}</p> -->
+							<p class="sender">sender : <span class="name">{{ msg.from }}</span></p>
+							<button class="ui-btn-remove btn btn-danger" ng-click="removeChat(msg);"><span class="glyphicon glyphicon-remove"></span></button>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="chat-toolbar">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12">
+
+				<form ng-submit="addChat($event)">
+					<div class="col-md-2 col-sm-2 col-xs-4">
+						<p class="form-group">
+							<!-- <label for="nameInput">Username:</label> -->
+							<input class="form-control" ng-model="name" type="text" id="nameInput" placeholder="Name...">
+							<!-- <select class="form-control" id="nameInput" ng-model="name" ng-init="name='Dick Sucker'">
+								<option value="Dennis">Dennis</option>
+								<option value="Mario">Mario</option>
+								<option value="Angel">Angel</option>
+								<option value="Gerhard">Gerhard</option>
+								<option value="Jarvis">Jarvis</option>
+								<option value="Idalia">Idalia</option>
+								<option value="Dick Sucker">Dick Sucker</option>
+								<option value="Hooker">Hooker</option>
+							</select> -->
+						</p>
+					</div>
+					<div class="col-msg col-md-8 col-sm-8 col-xs-8">
+						<p class="form-group">
+							<!-- <label for="nameInput">Message:</label> -->
+							<input class="form-control" ng-model="msg" type="text" id="messageInput" placeholder="Say something...">
+						</p>
+					</div>
+					<div class="col-md-2 col-sm-2 col-xs-12">
+						<p class="buttons-container"><button type="submit" class="ui-btn-send btn btn-primary"><span class="glyphicon glyphicon-send"></span></button></p>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</div>
